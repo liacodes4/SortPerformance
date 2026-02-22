@@ -135,7 +135,7 @@ def merge_sort(arr):
     merged = []
     i = j = 0
     while i < len(left) and j < len(right):
-        if left[i] <= right[j]:  # <= keeps stability
+        if left[i] <= right[j]:  
             merged.append(left[i])
             i += 1
         else:
@@ -217,7 +217,6 @@ def demonstrate_stability():
         merged = []
         i = j = 0
         while i < len(left) and j < len(right):
-            # <= keeps stability (prefer left item when prices tie)
             if left[i]["price"] <= right[j]["price"]:
                 merged.append(left[i])
                 i += 1
